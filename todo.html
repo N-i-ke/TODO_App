@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./todo.css">
+    <title>todo.app</title>
+</head>
+<body>
+    <h1 class="ttl">
+        TODOAPP
+    </h1>
+    <div class="increase_box">
+        <div class="incre_container">
+            <p>
+            リストを追加するときはこちらのボタン
+            </p>
+            
+            <button type="button" value="increTODO" onclick="increTODO()">
+                リストを追加する
+            </button>
+        </div>
+    </div>
+
+    <div  class="todo_list">
+        <ul>
+            <!-- defaultの関数todoAction() -->
+            <li class="todo_done">Todo 1 <button onclick="todoAction()">done</button></li>
+            <li class="todo_done">Todo 2 <button onclick="todoAction()">done</button></li>
+            <li class="todo_done">Todo 3 <button onclick="todoAction()">done</button></li>
+        </ul>
+    </div>
+
+    <ul id="list_ID">
+        <li>
+            <p class="todo_sen">
+                test todo_sen
+            </p>
+            <button class="next_todo_sen">
+                next todo_sen
+            </button>
+        </li>
+        <!-- 上にあるリストを追加したらここからliタグが追加され続ける -->
+    </ul>
+
+    <div class="block">
+        
+        <div class="click_button">
+            <button type="button" onclick="test_create_button()">test_button</button>
+        </div>
+        
+        <ul id="test">
+            <li>
+                <!-- first element -->
+                <p class="first">
+                    TODO:
+                </p>
+                <!-- second element -->
+                <p class="second">
+                    test_sentence
+                </p>
+            </li>
+            <!-- ここからonclick属性で -->
+            <!-- <div>
+                <p></p>
+                <p></p>
+            </div> -->
+        </ul>
+    </div>
+
+    <input type="text" id="new-todo">
+    <button onclick="addBtn()">add_list</button>
+    
+    <script src="./todo.js"></script>
+    <script src="./test.js"></script>
+</body>
+</html>

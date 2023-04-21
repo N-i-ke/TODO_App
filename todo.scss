@@ -1,0 +1,107 @@
+body{
+    margin: 10px;
+    background-color: white;
+    text-align: center;
+
+    .ttl{
+        margin: 20px 0px;
+        font-size: 40px;
+        text-align: center;
+        padding-bottom: 30px;
+    }
+
+    .increase_box{
+        max-width: 700px;
+        margin: 0 auto;
+        border: 1px solid black;
+        .incre_container{
+            padding-top: 30px;
+            padding-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    //defaultのレイアウトの感じ
+    .todo_list{
+            text-align: center;
+            margin-top: 30px;
+            ul{
+                text-align: center;
+
+                li{
+                max-width: 500px;
+                margin: 0 auto;
+                list-style-type: none;
+                //わかりやすいように一時的に配置
+                background-color: gray;
+                color: white;
+            
+                button{
+                    color: white;
+                }
+            }
+
+        }
+
+    }
+
+    #list_ID{
+        //DOM操作の部分
+        display: flex;
+        justify-content: center;
+
+        li{
+            display: flex;
+            flex-flow: column;
+            width: 500px;
+            height: 24.5px;
+            background-color: gray;
+            color: #fff;
+        }
+
+            .todo_sen{
+                background-color: gray;
+                color: #fff;
+                width: 500px;
+                height: 24.5px;
+                // margin: 0 auto;
+                //layoutはデフォルトと揃える
+            }
+
+            .next_todo_sen{
+                background-color: gray;
+                color:#fff;
+                width: 500px;
+                height: 24.5px;
+            }
+            
+        }
+
+        .block{
+
+            background-color: yellow;
+            width: 1000px;
+            height: 1000px;
+            margin: 0 auto;
+            padding-top: 100px;
+
+            .click_button{
+
+                text-align: center;
+            }
+
+            #test{
+
+                li{
+                    display: flex;
+                    justify-content: center;
+                    width: 500px;
+                    height: 24.5px;
+                    margin: 0 auto;
+                    background-color: gray;
+                    color: #fff;
+                }
+            }
+        }
+}

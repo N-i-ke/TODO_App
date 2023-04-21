@@ -1,0 +1,83 @@
+body {
+  margin: 10px;
+  background-color: white;
+  text-align: center;
+}
+body .ttl {
+  margin: 20px 0px;
+  font-size: 40px;
+  text-align: center;
+  padding-bottom: 30px;
+}
+body .increase_box {
+  max-width: 700px;
+  margin: 0 auto;
+  border: 1px solid black;
+}
+body .increase_box .incre_container {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+body .todo_list {
+  text-align: center;
+  margin-top: 30px;
+}
+body .todo_list ul {
+  text-align: center;
+}
+body .todo_list ul li {
+  max-width: 500px;
+  margin: 0 auto;
+  list-style-type: none;
+  background-color: gray;
+  color: white;
+}
+body .todo_list ul li button {
+  color: white;
+}
+body #list_ID {
+  display: flex;
+  justify-content: center;
+}
+body #list_ID li {
+  display: flex;
+  flex-flow: column;
+  width: 500px;
+  height: 24.5px;
+  background-color: gray;
+  color: #fff;
+}
+body #list_ID .todo_sen {
+  background-color: gray;
+  color: #fff;
+  width: 500px;
+  height: 24.5px;
+}
+body #list_ID .next_todo_sen {
+  background-color: gray;
+  color: #fff;
+  width: 500px;
+  height: 24.5px;
+}
+body .block {
+  background-color: yellow;
+  width: 1000px;
+  height: 1000px;
+  margin: 0 auto;
+  padding-top: 100px;
+}
+body .block .click_button {
+  text-align: center;
+}
+body .block #test li {
+  display: flex;
+  justify-content: center;
+  width: 500px;
+  height: 24.5px;
+  margin: 0 auto;
+  background-color: gray;
+  color: #fff;
+}
+/*# sourceMappingURL=todo.css.map */
