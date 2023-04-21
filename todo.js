@@ -8,11 +8,11 @@ console.log(addTodoButton);
 //   const input = document.querySelector("#new-todo");
 //   const text = input.value;
 
-//   //input参照してString型で返す
+//   input参照してString型で
 //   input.value = "";
 
 //   const newLi = document.createElement("li");
-//   //inputで入ったものを入れる
+//   //inputに入れる
 //   newLi.innerText = text;
 //   console.log(newLi);
 // });
@@ -21,14 +21,15 @@ console.log(addTodoButton);
 function newTodoBtn(){ 
   const input = document.getElementById('new-todo');
   const text = input.value;
-  //input.valueに文字列を入れちゃう
+  //value参照
   input.value = '';
   const newLi = document.createElement('li');
-  //liタグの中にtextを入れる
+  
   newLi.innerText = text;
   console.log(input);
-  //ここでliタグを作ってるから
+  
   document.querySelector('ul').appendChild(newLi);
+  //下消しても可
   // newLi.appendChild(input);
 }
 
