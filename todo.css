@@ -1,26 +1,35 @@
 body {
-  background-color: aqua;
-  color: red;
+  background-color: #000;
+  color: #fff;
 }
 body .box {
   margin-top: 200px;
   margin-bottom: 100px;
   text-align: center;
 }
-body ul {
+body .box label {
+  color: #fff;
+}
+body .ul_box {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+body .ul_box ul {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 10px;
 }
-body ul li {
+body .ul_box ul li {
   width: 500px;
   height: 24.5px;
+  padding: 5px;
   margin: 0 auto;
   background-color: #fff;
   color: black;
 }
-body ul button {
+body .ul_box ul button {
   width: 500px;
-  height: 24.5px;
+  height: 34.5px;
   margin: 0 auto;
   background-color: #fff;
   color: black;
