@@ -1,3 +1,5 @@
+//ボタンを押したらliタグとbuttonタグが増える動き
+
 function clickBtn() { 
 
     const testInput = document.getElementById('new-todo');
