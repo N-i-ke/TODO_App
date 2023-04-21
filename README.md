@@ -1,4 +1,2 @@
 # TODO_App
 
-
-mainブランチと違いtodoListのbuttonを押した後中央線でチェックを入れられる
