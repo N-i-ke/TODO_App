@@ -1,48 +1,43 @@
+const addTodoButton = document.getElementById("new-todo");
+console.log(addTodoButton);
 
-function test_create_button() { 
+//youtuber mu-zaru-channelを一部参考にソースコードは以下
+// https://github.com/moozaru-ch/mu-zaru-channel/blob/master/todo-javascript/day2/index.html
 
-    var body = document.getElementsByTagName('body')[0];
-    var getID = document.getElementById('test');
-    var getLi = document.createElement('li');
+// addTodoButton.addEventListner("click", () => {
+//   const input = document.querySelector("#new-todo");
+//   const text = input.value;
 
-    for (let i = 0; i < 2; i++) { 
-        //中ループ二つ取れる
-        var liBox = document.createElement('div');
-      
-        for (let j = 0; j < 2; j++) { 
-            var pF = document.createElement('p');
-            var pS = document.createElement('p');
+//   //input参照してString型で返す
+//   input.value = "";
 
-            pF.appendChild(liBox);
-            pS.appendChild(liBox);
-        }
-        getLi.appendChild(liBox);
-        //一旦divを入れる
-    }
-    getID.appendChild(getLi);
-    body.appendChild(getID);
+//   const newLi = document.createElement("li");
+//   //inputで入ったものを入れる
+//   newLi.innerText = text;
+//   console.log(newLi);
+// });
+
+//newTODOの挙動
+function newTodoBtn(){ 
+  const input = document.getElementById('new-todo');
+  const text = input.value;
+  //input.valueに文字列を入れちゃう
+  input.value = '';
+  const newLi = document.createElement('li');
+  //liタグの中にtextを入れる
+  newLi.innerText = text;
+  console.log(input);
+  //ここでliタグを作ってるから
+  document.querySelector('ul').appendChild(newLi);
+  // newLi.appendChild(input);
 }
 
-addBtn()
-function addBtn() { 
-    const addTodoButton = document.querySelectorAll('#new-todo');
-    //ID検索してクリックされたら
-    addTodoButton.addEventListner('click', () => {
-        
-        const input = document.querySelector('#new-todo');
-        const text = input.value;
+function addNewBtn() { 
 
-        console.log(text);
+  let newBtn = document.createElement('button');
+  newBtn.innerText = 'done';
 
+  console.log(newBtn);
 
-
-    });
+  document.querySelector('ul').appendChild(newBtn)
 }
-
-//必要なファイルtodo.html
-// todo.js
-// test.js
-// sass bem記法
-// todo.scss
-// todo.css
-// reset.css
