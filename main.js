@@ -1,14 +1,11 @@
 function clickBtn() { 
 
-    //liタグを作る
-    const testInput = document.getElementById('test-new-todo');
+    const testInput = document.getElementById('new-todo');
     const testText = testInput.value;
 
-    //buttonタグを作る
     const createBtn = document.createElement('button');
     createBtn.innerText = 'done';
     
-
     testInput.value = '';
 
     const createLi = document.createElement('li');
@@ -18,3 +15,4 @@ function clickBtn() {
     document.querySelector('ul').appendChild(createBtn);
     
 }
+
