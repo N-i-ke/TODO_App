@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./todo.css">
+    <title>todo.app</title>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1 class="header_left">
+                <!-- hamburgermenuのボタンの実装 -->
+                <label class="menuBtn" for="hamburger-menu" onclick="toggleMenu()">
+                    <span id="toggleMenu"></span>
+                </label>
+                <!-- DOM hamburger-menu toggleMenu() -->
+                <ul class="hiddenWrap" id="hamburger-wrap">
+                    <div>
+                        Menu
+                    </div>
+                    <li>
+                        <a href="">test1</a>
+                    </li>
+                    <li>
+                        <a href="">test2</a>
+                    </li>
+                    <li>
+                        <a href="">test3</a>
+                    </li>
+                </ul>
+            </h1>
+            <h1 class="header_right">
+                right
+            </h1>
+        </div>
+    </header>
+
+    <div class="box">
+        <label for="name">Create TODO-list</label>
+        <input id="new-todo" type="placeholder" name = "TODO-list">
+        <button type="text" onclick="clickBtn()">add_todo_list</button>
+    </div>
+
+    <div class="ul_box">
+        <!-- DOM clickBtn() -->
+        <ul id="ul">
+
+        </ul>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer_left">
+                <h1>
+                    footer_left
+                </h1>
+            </div>
+            <div class="footer_right">
+                <h1>
+                    footer_right
+                </h1>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="./todo.js"></script>
+    <script src="./todo-hamburger.js"></script>
+</body>
+</html>
