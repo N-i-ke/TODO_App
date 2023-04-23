@@ -1,0 +1,52 @@
+body{
+    background-color: #000;
+    color: #fff;
+    .box{
+        margin-top: 100px;
+        margin-bottom: 100px;
+        text-align: center;
+
+        label{
+            color:#fff;
+        }
+    }
+
+    .ul_box{
+        max-width: 1080px;
+        margin: 0 auto;
+
+        ul{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+    
+            li{
+                width: 500px;
+                height: 24.5px;
+                padding: 5px;
+                margin: 0 auto;
+                background-color: #fff;
+                color: black;
+            }
+            button{
+                width: 500px;
+                height: 34.5px;
+                margin: 0 auto;
+                background-color: #fff;
+                color: black;
+            }
+
+            //js追加されるbutton
+            .add_button{
+                // margin: 10px;
+            }
+            //jsで追加されるli
+            .add_li{
+                // margin: 10px;
+            }
+        }
+
+    }
+
+
+}
