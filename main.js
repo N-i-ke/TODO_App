@@ -1,4 +1,5 @@
-//todoListを押したらliタグとbuttonタグが増える動き
+//ボタンを押したらliタグとbuttonタグが増える動き
+
 function clickBtn() { 
 
     const testInput = document.getElementById('new-todo');
@@ -16,3 +17,4 @@ function clickBtn() {
     document.querySelector('ul').appendChild(createBtn);
     
 }
+

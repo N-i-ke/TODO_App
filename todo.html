@@ -6,10 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./reset.css">
     <link rel="stylesheet" href="./todo.css">
-    <title>todo.app</title>
+    <!-- 先にjqueryを読み込んでその後にmaterialize.min.jsを読み込むように -->
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@materializecss/materialize@2.0.0-alpha/dist/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/@materializecss/materialize@2.0.0-alpha/dist/js/materialize.min.js"></script>
+    <title>TODO.App</title>
 </head>
 <body>
+    <!-- header  -->
+    <header>
+        <div class="navbar-fixed">
+            <nav class="nav-wraper  deep-red">
+                <div class="cotainer">
+                    <a href="#" class="sidenav-trigger right" data-target="mobile-links">
+                        <i class="material-icons">menu</i>
+                    </a>
+                    <div class="menu">
+                        <ul class="right hide-on-med-and-down">
+                            <li><a href="#" class="grey-text text-lighten-3">Search</a></li>
+                            <li><a href="#" class="grey-text text-lighten-3">Setting</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <!-- sidebar contents -->
+        <ul class="sidenav" id="mobile-links">
+            <a href="#" class="sidenav-close " data-target="mobile-links">
+                <i class="material-icons close-icon ">close</i>
+            </a>
+            <div class="menu">
+                <li><a href="#">Search</a></li>
+                <li><a href="#">Setting</a></li>
+            </div>
+        </ul>
+    </header>
 
+    <!-- box contents -->
     <div class="box">
         <label for="name">Create TODO-list</label>
         <input id="new-todo" type="placeholder" name = "TODO-list">
@@ -17,12 +54,32 @@
     </div>
 
     <div class="ul_box">
-        <!-- DOM操作ここから -->
+        <!-- DOM clickBtn() -->
         <ul id="ul">
 
         </ul>
     </div>
-    
+
+    <!-- footer -->
+    <footer>
+        <div class="navbar-fixed">
+            <nav class="nav-wraper deep-red">
+                <div class="menu">
+                    <ul>
+                        <li onclick="trashAction()">
+                            <a href="">trash</a>
+                        </li>
+                        <li onclick="plusAction()">
+                            <a href="">plus</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </footer>
+            
+    <script src="./header.js"></script>
     <script src="./todo.js"></script>
+    <!-- <script src="./footer.js"></script> -->
 </body>
 </html>

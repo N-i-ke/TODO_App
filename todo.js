@@ -1,10 +1,11 @@
 //Todo.js 
 
+//func clicBtn()
 function clickBtn() {
   const Input = document.getElementById("new-todo");
   const Text = Input.value;
   Input.value = "";
-
+  
   const createBtn = document.createElement("button");
   createBtn.className = 'add_button'
   createBtn.innerText = "done";
@@ -22,7 +23,9 @@ function clickBtn() {
     }
   }
 
-  document.querySelector("ul").appendChild(createLi);
-  document.querySelector("ul").appendChild(createBtn);
+  document.getElementById("ul").appendChild(createLi);
+  document.getElementById("ul").appendChild(createBtn);
+
+  console.log('TODOListは追加されています。');
 }
 
