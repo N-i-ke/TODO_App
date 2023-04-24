@@ -12,9 +12,9 @@ function clickBtn() {
 
     const createLi = document.createElement('li');
     createLi.innerText = testText;
-
-    document.querySelector('ul').appendChild(createLi);
-    document.querySelector('ul').appendChild(createBtn);
+    //queryselectorだとエラー出ないけど動かないため。
+    document.getElementById('ul').appendChild(createLi);
+    document.getElementById('ul').appendChild(createBtn);
     
 }
 
