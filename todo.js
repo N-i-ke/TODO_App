@@ -7,11 +7,13 @@ function clickBtn() {
   Input.value = "";
   
   const createBtn = document.createElement("button");
-  createBtn.className = 'add_button'
+  //material.js
+  createBtn.className = 'add_button col s2'
   createBtn.innerText = "done";
 
   const createLi = document.createElement("li");
-  createLi.className = 'add_li'
+  //material.js
+  createLi.className = 'add_li col s2'
   createLi.innerText = Text;
 
   //clickされた時にline-throughを持ってなかったら付け加えて持ってたらつける
