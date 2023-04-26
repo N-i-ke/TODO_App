@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./reset.css">
     <link rel="stylesheet" href="./todo.css">
-    <!-- 先にjqueryを読み込んでその後にmaterialize.min.jsを読み込むこと-->
+    <!-- Materialframework+icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- 先にjqueryを読み込んでその後にmaterialize.min.jsを読み込むように -->
     <!-- jquery -->
     <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@materializecss/materialize@2.0.0-alpha/dist/css/materialize.min.css">
@@ -20,22 +22,35 @@
         <div class="navbar-fixed">
             <nav class="nav-wraper  deep-red">
                 <div class="cotainer">
-                    <a href="#" class="sidenav-trigger right" data-target="mobile-links">
-                        <i class="material-icons">menu</i>
+                    <a href="#" class="sidenav-trigger left" data-target="mobile-links">
+                        <i class="material-icons hamMenu">menu</i>
                     </a>
                     <div class="menu">
                         <ul class="right hide-on-med-and-down">
-                            <li><a href="#" class="grey-text text-lighten-3">Search</a></li>
-                            <li><a href="#" class="grey-text text-lighten-3">Setting</a></li>
+                            <li>
+                                <a href="#Search.html" class="grey-text text-lighten-3">
+                                    <!-- Search  -->
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#Setting.html" class="grey-text text-lighten-3">
+                                    <!-- Setting  -->
+                                </a>
+                            </li>
                         </ul>
+                    </div>
+
+                    <div class="right" style="display: flex;">
+                        <i class="material-icons search">search</i>
+                        <i class="material-icons settings">settings</i>
                     </div>
                 </div>
             </nav>
         </div>
         <!-- sidebar contents -->
         <ul class="sidenav" id="mobile-links">
-            <a href="#" class="sidenav-close " data-target="mobile-links">
-                <i class="material-icons close-icon ">close</i>
+            <a href="#" class="sidenav-close" data-target="mobile-links">
+                <i class="material-icons close-icon">close</i>
             </a>
             <div class="menu">
                 <li><a href="#">Search</a></li>
@@ -46,9 +61,8 @@
 
     <!-- box contents -->
     <div class="box">
-        <label for="name">Create TODO-list</label>
         <input id="new-todo" type="placeholder" name = "TODO-list">
-        <button type="text" onclick="clickBtn()">add_todo_list</button>
+        <button type="text" onclick="clickBtn()">リストを追加する</button>
     </div>
 
     <div class="ul_box">
