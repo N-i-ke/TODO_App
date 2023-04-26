@@ -21,7 +21,7 @@ body .ul_box ul {
 }
 body .ul_box ul li {
   width: 500px;
-  height: 24.5px;
+  height: 34.5px;
   padding: 5px;
   margin: 0 auto;
   background-color: #fff;
@@ -33,5 +33,8 @@ body .ul_box ul button {
   margin: 0 auto;
   background-color: #fff;
   color: black;
+}
+body footer {
+  margin-top: 100px;
 }
 /*# sourceMappingURL=todo.css.map */
