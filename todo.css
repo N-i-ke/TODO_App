@@ -10,6 +10,9 @@ body .box {
 body .box label {
   color: #fff;
 }
+body header {
+  height: 54px;
+}
 body .ul_box {
   max-width: 1080px;
   margin: 0 auto;
@@ -35,6 +38,7 @@ body .ul_box ul button {
   color: black;
 }
 body footer {
+  height: 54px;
   margin-top: 100px;
 }
 /*# sourceMappingURL=todo.css.map */
