@@ -20,6 +20,6 @@ Materialize.js
 🔘WebAPI
 
 localStrage
-サーバーレスでの環境でも動くことを実現するため
+localでTodoListのデータを保持するため。
 
 
