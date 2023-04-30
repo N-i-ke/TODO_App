@@ -1,97 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./reset.css">
-    <link rel="stylesheet" href="./todo.css">
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="./todo.css" />
     <!-- Materialframework+icons -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
     <!-- 先にjqueryを読み込んでその後にmaterialize.min.jsを読み込むように -->
-    <!-- jquery -->
-    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@materializecss/materialize@2.0.0-alpha/dist/css/materialize.min.css">
+    <script
+      src="https://code.jquery.com/jquery-3.6.4.js"
+      integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@materializecss/materialize@2.0.0-alpha/dist/css/materialize.min.css"
+    />
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/@materializecss/materialize@2.0.0-alpha/dist/js/materialize.min.js"></script>
     <title>TODO.App</title>
-</head>
-<body>
+  </head>
+  <body>
     <!-- header  -->
     <header>
+      <div class="container">
         <div class="navbar-fixed">
-            <nav class="nav-wraper  deep-red">
-                <div class="cotainer">
-                    <a href="#" class="sidenav-trigger left" data-target="mobile-links">
-                        <i class="material-icons hamMenu">menu</i>
-                    </a>
-                    <div class="menu">
-                        <ul class="right hide-on-med-and-down">
-                            <li>
-                                <a href="#Search.html" class="grey-text text-lighten-3">
-                                    <!-- Search  -->
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#Setting.html" class="grey-text text-lighten-3">
-                                    <!-- Setting  -->
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
+          <nav class="nav-wraper deep-red">
+            <i
+              class="left material-icons sidenav-trigger"
+              data-target="mobile-links"
+              >menu</i
+            >
 
-                    <div class="right" style="display: flex;">
-                        <i class="material-icons search">search</i>
-                        <i class="material-icons settings">settings</i>
-                    </div>
-                </div>
-            </nav>
+            <div class="right" style="display: flex">
+              <i class="medium material-icons search">search</i>
+              <i class="medium material-icons settings">settings</i>
+            </div>
+          </nav>
         </div>
         <!-- sidebar contents -->
         <ul class="sidenav" id="mobile-links">
-            <a href="#" class="sidenav-close" data-target="mobile-links">
-                <i class="material-icons close-icon">close</i>
-            </a>
-            <div class="menu">
-                <li><a href="#">Search</a></li>
-                <li><a href="#">Setting</a></li>
-            </div>
+          <a href="#" class="sidenav-close" data-target="mobile-links">
+            <i class="material-icons close-icon">close</i>
+          </a>
+          <div class="menu">
+            <li><a href="#">Search</a></li>
+            <li><a href="#">Setting</a></li>
+          </div>
         </ul>
+      </div>
     </header>
 
-    <!-- box contents -->
     <div class="box">
-        <input id="new-todo" type="placeholder" name = "TODO-list">
-        <button type="text" onclick="clickBtn()">リストを追加する</button>
+      <!-- リストを入力する -->
+      <input id="todoBtn" type="placeholder" name="TODO-list" />
+      <!-- 追加するボタンリスト -->
+      <button id="addBtn" type="text">リストを追加する</button>
     </div>
 
     <div class="ul_box">
-        <!-- DOM clickBtn() -->
-        <ul id="ul">
-
-        </ul>
+      <ul id="ul"></ul>
     </div>
-
     <!-- footer -->
     <footer>
+      <div class="container">
         <div class="navbar-fixed">
-            <nav class="nav-wraper deep-red">
-                <div class="menu">
-                    <ul>
-                        <li onclick="trashAction()">
-                            <a href="">trash</a>
-                        </li>
-                        <li onclick="plusAction()">
-                            <a href="">plus</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
+          <nav class="nav-wraper deep-red">
+            <ul>
+              <div id="plusBtn" class="right">
+                <i class="material-icons playlist_add">playlist_add</i>
+              </div>
+              <div id="trashBtn" class="left">
+                <i class="material-icons restore_from_trash"
+                  >restore_from_trash</i
+                >
+              </div>
+            </ul>
+          </nav>
         </div>
+      </div>
     </footer>
-            
-    <script src="./header.js"></script>
+    
     <script src="./todo.js"></script>
-    <!-- <script src="./footer.js"></script> -->
-</body>
+  </body>
 </html>

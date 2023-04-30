@@ -11,7 +11,11 @@ body{
         }
     }
 
-    //headerレイアウトはframeworkだけで使用している
+    //header
+    header{
+        height: 54px;
+    }
+
     .ul_box{
         max-width: 1080px;
         margin: 0 auto;
@@ -50,8 +54,9 @@ body{
     }
 
     footer {
+        height: 54px;
         margin-top: 100px;
-        
+
     }
 
 }
