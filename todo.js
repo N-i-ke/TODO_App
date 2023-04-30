@@ -53,28 +53,24 @@ let setupTodoList = () => {
     createBtn.id = "todoID";
     createBtn.innerText = "完了";
 
-    const createLi = document.createElement("li");
-    createLi.className = "input-field col s2";
-    createLi.id = "todoID";
-    createLi.innerText = Text;
+    const createInput = document.createElement("input");
+    createInput.className = "input-field col s2";
+    createInput.id = "todoID";
+    createInput.value = Text;
 
     createBtn.onclick = function () {
-      if (createLi.style.textDecoration === "line-through") {
-        createLi.style.textDecoration = "none";
+      if (createInput.style.textDecoration === "line-through") {
+        createInput.style.textDecoration = "none";
       } else {
-        createLi.style.textDecoration = "line-through";
+        createInput.style.textDecoration = "line-through";
       }
     };
 
-    document.getElementById("ul").appendChild(createLi);
+    document.getElementById("ul").appendChild(createInput);
     document.getElementById("ul").appendChild(createBtn);
 
     const inputData = Text;
     localStorage.setItem("key", inputData);
-
-    //ここで保存がされてるのでここを削除する必要がある
-    // const saveData = localStorage.getItem('key');
-    // Text = saveData;
 
     //loadしたらローカルストレージの履歴は消える
     window.addEventListener("beforeunload", function () {
@@ -84,4 +80,3 @@ let setupTodoList = () => {
 };
 
 main();
-
