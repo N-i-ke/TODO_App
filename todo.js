@@ -44,39 +44,55 @@ let setupTodoList = () => {
   const addBtn = document.querySelector("#addBtn");
 
   addBtn.addEventListener("click", function () {
-    const Input = document.querySelector("#todoBtn");
-    const Text = Input.value;
-    Input.value = "";
-
-    const createBtn = document.createElement("button");
-    createBtn.className = "add_button col s2";
-    createBtn.id = "todoID";
-    createBtn.innerText = "完了";
-
-    const createInput = document.createElement("input");
-    createInput.className = "input-field col s2";
-    createInput.id = "todoID";
-    createInput.value = Text;
-
-    createBtn.onclick = function () {
-      if (createInput.style.textDecoration === "line-through") {
-        createInput.style.textDecoration = "none";
-      } else {
-        createInput.style.textDecoration = "line-through";
-      }
-    };
-
-    document.getElementById("ul").appendChild(createInput);
-    document.getElementById("ul").appendChild(createBtn);
-
-    const inputData = Text;
-    localStorage.setItem("key", inputData);
-
-    //loadしたらローカルストレージの履歴は消える
-    window.addEventListener("beforeunload", function () {
-      localStorage.clear();
-    });
+    const input = document.querySelector("#todoBtn");
+    const text = input.value;
+    input.value = "";
+    createList(text);
   });
+
+  $(document).ready(function () {
+    const todos = localStorage.getItem("todos").split(",");
+    for (let i = 0; i < todos.length; i++) {
+      createList(todos[i]);
+    }
+  });
+};
+
+let saveLocalStrage = () => {
+  let datas = [];
+  let query = $(".input-field");
+  for (let i = 0; i < query.length; i++) {
+    datas.push(query[i].value);
+  }
+  localStorage.setItem("todos", datas);
+};
+
+let createList = (input) => {
+  const createBtn = document.createElement("button");
+  createBtn.className = "add_button col s2";
+  createBtn.id = "todoID";
+  createBtn.innerText = "完了";
+
+  const createInput = document.createElement("input");
+  createInput.className = "input-field col s2";
+  createInput.id = "todoID";
+  createInput.value = input;
+  //localStrageで保存
+  createInput.oninput = function () {
+    saveLocalStrage();
+  };
+
+  createBtn.onclick = function () {
+    if (createInput.style.textDecoration === "line-through") {
+      createInput.style.textDecoration = "none";
+    } else {
+      createInput.style.textDecoration = "line-through";
+    }
+  };
+
+  document.getElementById("ul").appendChild(createInput);
+  document.getElementById("ul").appendChild(createBtn);
+  saveLocalStrage();
 };
 
 main();
