@@ -17,9 +17,4 @@ Materialize.js
 レイアウトも綺麗に作成できるため。
 
 
-🔘WebAPI
-
-localStrage
-サーバーレスでの環境でも動くことを実現するため
-
 
